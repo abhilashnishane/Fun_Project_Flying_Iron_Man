@@ -1,0 +1,44 @@
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#ironman {
+	transform: translate(330px,50px) scale(0.02);
+
+	animation:fly 2s linear infinite;
+}
+
+@keyframes fly
+{
+	0%{transform:translate(330px,50px) scale(0.02)}
+	10%{transform:translate(350px,50px) scale(0.05)}
+	20%{transform:translate(370px,50px) scale(0.08)}
+	30%{transform:translate(390px,50px) scale(0.15)}
+	40%{transform:translate(410px,50px) scale(0.25)}
+	50%{transform:translate(420px,50px) scale(0.35)}
+	60%{transform:translate(440px,50px) scale(0.45)}
+	70%{transform:translate(460px,50px) scale(0.55)}
+	80%{transform:translate(200px,50px) scale(0.65)}
+	90%{transform:translate(0px,40px) scale(0.75)}
+	95%{transform:translate(-200px,30px) scale(1)}
+	100%{transform:translate(-400px,20px) scale(1.3)}
+}
+
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
